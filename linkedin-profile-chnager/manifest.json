@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Profile Picture Changer",
+    "version": "1.1",
+    "description": "Chrome extension to change LinkedIn profile pictures in posts.",
+    "permissions": [
+      "activeTab",
+      "declarativeContent",
+      "webNavigation"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/feed/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+   
+  }
+  
